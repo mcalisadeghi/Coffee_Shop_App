@@ -25,7 +25,7 @@ class MyHomePage extends StatelessWidget {
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
+          children: <Widget>[
             Text(
               'Coffe Shop',
               style: GoogleFonts.pacifico(
@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             Column(
-              children: [
+              children: <Widget>[
                 Text(
                   'Feelin Low? Take a Sip of Coffee',
                   style: TextStyle(
@@ -49,29 +49,27 @@ class MyHomePage extends StatelessWidget {
                 const SizedBox(
                   height: 80,
                 ),
-                InkWell(
-                  splashColor: Colors.black,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
-                      ),
-                    );
-                  },
-                  child: Ink(
+                Material(
+                  color: const Color(
+                    0xFFE57734,
+                  ),
+                  borderRadius: BorderRadius.circular(
+                    10,
+                  ),
+                  child: InkWell(
+                    splashColor: Colors.black,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => const HomeScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                         vertical: 15,
                         horizontal: 33,
-                      ),
-                      decoration: BoxDecoration(
-                        color: const Color(
-                          0xFFE57734,
-                        ),
-                        borderRadius: BorderRadius.circular(
-                          10,
-                        ),
                       ),
                       child: const Text(
                         'Get Start',
