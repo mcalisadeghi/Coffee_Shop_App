@@ -155,7 +155,7 @@ class _SingleItemScreenState extends State<SingleItemScreen> {
                         ),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       const Row(
                         children: <Widget>[
@@ -181,7 +181,7 @@ class _SingleItemScreenState extends State<SingleItemScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 50,
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width,
@@ -191,7 +191,7 @@ class _SingleItemScreenState extends State<SingleItemScreen> {
                             Container(
                               padding: const EdgeInsets.symmetric(
                                 vertical: 20,
-                                horizontal: 50,
+                                horizontal: 60,
                               ),
                               decoration: BoxDecoration(
                                 color: const Color.fromARGB(

@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen>
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: <Widget>[
                     InkWell(
                       onTap: () {},
                       child: Icon(
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen>
                   'Its a Great Day for Coffee',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 30,
+                    fontSize: 28,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -109,13 +109,13 @@ class _HomeScreenState extends State<HomeScreen>
                     56,
                   ),
                   borderRadius: BorderRadius.circular(
-                    10,
+                    30,
                   ),
                 ),
                 child: TextFormField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'find youor coffee',
+                    hintText: 'find your coffee',
                     hintStyle: TextStyle(
                       color: Colors.white.withOpacity(
                         0.5,
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen>
                     text: 'Hot Coffee',
                   ),
                   Tab(
-                    text: 'cold Coffee',
+                    text: 'Cold Coffee',
                   ),
                   Tab(
                     text: 'Cappuiccino',
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen>
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 15,
               ),
               Center(
                 child: <Widget>[

@@ -6,7 +6,8 @@ class ItemsWidget extends StatelessWidget {
   ItemsWidget({super.key});
   final List img = [
     'Latte',
-    'Espresso' 'Black Coffee',
+    'Espresso',
+    'Black Coffee',
     'cold coffee',
   ];
   @override
@@ -15,7 +16,7 @@ class ItemsWidget extends StatelessWidget {
       crossAxisCount: 2,
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      childAspectRatio: (150 / 195),
+      childAspectRatio: (145 / 220),
       children: <Widget>[
         for (int i = 0; i < img.length; i++)
           Container(
