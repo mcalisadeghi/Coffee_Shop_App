@@ -6,12 +6,12 @@ class HomeBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 15,
       ),
       height: 80,
       decoration: BoxDecoration(
-        color: Color(
+        color: const Color(
           0xFF212325,
         ),
         boxShadow: [
@@ -24,9 +24,9 @@ class HomeBottomBar extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+        children: <Widget>[
           Icon(
             Icons.home,
             color: Color(

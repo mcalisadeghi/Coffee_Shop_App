@@ -16,14 +16,14 @@ class ItemsWidget extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       childAspectRatio: (150 / 195),
-      children: [
+      children: <Widget>[
         for (int i = 0; i < img.length; i++)
           Container(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               vertical: 5,
               horizontal: 10,
             ),
-            margin: EdgeInsets.symmetric(
+            margin: const EdgeInsets.symmetric(
               vertical: 8,
               horizontal: 13,
             ),
@@ -31,10 +31,10 @@ class ItemsWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(
                 20,
               ),
-              color: Color(
+              color: const Color(
                 0xFF212325,
               ),
-              boxShadow: [
+              boxShadow: <BoxShadow>[
                 BoxShadow(
                   color: Colors.black.withOpacity(
                     0.5,
@@ -45,7 +45,7 @@ class ItemsWidget extends StatelessWidget {
               ],
             ),
             child: Column(
-              children: [
+              children: <Widget>[
                 InkWell(
                   onTap: () => Navigator.push(
                     context,
@@ -55,7 +55,7 @@ class ItemsWidget extends StatelessWidget {
                     ),
                   ),
                   child: Container(
-                    margin: EdgeInsets.all(
+                    margin: const EdgeInsets.all(
                       10,
                     ),
                     child: Image.asset(
@@ -67,27 +67,27 @@ class ItemsWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     bottom: 8,
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Column(
-                      children: [
+                      children: <Widget>[
                         Text(
                           img[i],
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Text(
                           img[i],
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: Colors.white60,
@@ -98,13 +98,13 @@ class ItemsWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 5,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
+                    children: <Widget>[
+                      const Text(
                         '\$30',
                         style: TextStyle(
                           fontSize: 18,
@@ -113,18 +113,18 @@ class ItemsWidget extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(
+                        padding: const EdgeInsets.all(
                           5,
                         ),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                             0xFFE57734,
                           ),
                           borderRadius: BorderRadius.circular(
                             20,
                           ),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           CupertinoIcons.add,
                           size: 20,
                           color: Colors.white,

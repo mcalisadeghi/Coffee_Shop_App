@@ -1,19 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SingleItemScreen extends StatelessWidget {
-  String img;
-  SingleItemScreen(
+class SingleItemScreen extends StatefulWidget {
+  final String img;
+  const SingleItemScreen(
     this.img, {
     super.key,
   });
+
+  @override
+  State<SingleItemScreen> createState() => _SingleItemScreenState();
+}
+
+class _SingleItemScreenState extends State<SingleItemScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 30,
               bottom: 20,
             ),
@@ -21,7 +27,7 @@ class SingleItemScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     left: 25,
                   ),
                   child: InkWell(
@@ -34,26 +40,26 @@ class SingleItemScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Center(
                   child: Image.asset(
-                    'assets/images/$img.png',
+                    'assets/images/${widget.img}.png',
                     width: MediaQuery.of(context).size.width / 1.2,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     left: 25,
                     right: 40,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: <Widget>[
                       Text(
                         'BEST COFFEE',
                         style: TextStyle(
@@ -63,27 +69,27 @@ class SingleItemScreen extends StatelessWidget {
                           letterSpacing: 3,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
-                        img,
-                        style: TextStyle(
+                        widget.img,
+                        style: const TextStyle(
                           fontSize: 30,
                           letterSpacing: 1,
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: <Widget>[
                             Container(
-                              padding: EdgeInsets.all(
+                              padding: const EdgeInsets.all(
                                 15,
                               ),
                               width: 120,
@@ -94,9 +100,9 @@ class SingleItemScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              child: Row(
+                              child: const Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
+                                children: <Widget>[
                                   Icon(
                                     CupertinoIcons.minus,
                                     size: 18,
@@ -124,7 +130,7 @@ class SingleItemScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Text(
+                            const Text(
                               '\$ 30.20',
                               style: TextStyle(
                                 color: Colors.white,
@@ -135,7 +141,7 @@ class SingleItemScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
@@ -148,11 +154,11 @@ class SingleItemScreen extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        children: [
+                      const Row(
+                        children: <Widget>[
                           Text(
                             'Volume',
                             style: TextStyle(
@@ -174,21 +180,21 @@ class SingleItemScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 60,
+                      const SizedBox(
+                        height: 30,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: <Widget>[
                             Container(
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                 vertical: 20,
                                 horizontal: 50,
                               ),
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(
+                                color: const Color.fromARGB(
                                   255,
                                   50,
                                   54,
@@ -198,7 +204,7 @@ class SingleItemScreen extends StatelessWidget {
                                   18,
                                 ),
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Add to Cart',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -209,18 +215,18 @@ class SingleItemScreen extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.all(
+                              padding: const EdgeInsets.all(
                                 20,
                               ),
                               decoration: BoxDecoration(
-                                color: Color(
+                                color: const Color(
                                   0xFFE57734,
                                 ),
                                 borderRadius: BorderRadius.circular(
                                   18,
                                 ),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.favorite_outline,
                                 color: Colors.white,
                               ),
