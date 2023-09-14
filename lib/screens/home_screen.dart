@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/items_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -74,10 +75,10 @@ class _HomeScreenState extends State<HomeScreen>
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 15,
               ),
@@ -91,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen>
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                 horizontal: 15,
                 vertical: 20,
               ),
@@ -99,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen>
               height: 60,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: Color.fromARGB(
+                color: const Color.fromARGB(
                   255,
                   50,
                   54,
@@ -109,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen>
                   10,
                 ),
               ),
-              child: TextField(
+              child: TextFormField(
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: 'find youor coffee',
@@ -127,6 +128,59 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                 ),
               ),
+            ),
+            TabBar(
+              controller: _tabController,
+              labelColor: const Color(
+                0xFFE57734,
+              ),
+              unselectedLabelColor: Colors.white.withOpacity(
+                0.5,
+              ),
+              isScrollable: true,
+              indicator: const UnderlineTabIndicator(
+                borderSide: BorderSide(
+                  width: 3,
+                  color: Color(
+                    0xFFE57734,
+                  ),
+                ),
+                insets: EdgeInsets.symmetric(
+                  horizontal: 16,
+                ),
+              ),
+              labelStyle: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
+              labelPadding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              tabs: const <Widget>[
+                Tab(
+                  text: 'Hot Coffee',
+                ),
+                Tab(
+                  text: 'cold Coffee',
+                ),
+                Tab(
+                  text: 'Cappuiccino',
+                ),
+                Tab(
+                  text: 'Americano',
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Center(
+              child: <Widget>[
+                ItemsWidget(),
+                ItemsWidget(),
+                ItemsWidget(),
+                ItemsWidget(),
+              ][_tabController.index],
             ),
           ],
         ),
