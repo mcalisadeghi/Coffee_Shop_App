@@ -46,7 +46,13 @@ class ItemsWidget extends StatelessWidget {
             child: Column(
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          SingleItemScreen(img[i]),
+                    ),
+                  ),
                   child: Container(
                     margin: EdgeInsets.all(
                       10,
