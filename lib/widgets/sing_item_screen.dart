@@ -168,7 +168,7 @@ class _SingleItemScreenState extends State<SingleItemScreen> {
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            width: 20,
                           ),
                           Text(
                             '60 ml',
@@ -181,7 +181,7 @@ class _SingleItemScreenState extends State<SingleItemScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 50,
+                        height: 60,
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width,
@@ -191,7 +191,7 @@ class _SingleItemScreenState extends State<SingleItemScreen> {
                             Container(
                               padding: const EdgeInsets.symmetric(
                                 vertical: 20,
-                                horizontal: 60,
+                                horizontal: 50,
                               ),
                               decoration: BoxDecoration(
                                 color: const Color.fromARGB(
