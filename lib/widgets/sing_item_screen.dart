@@ -124,8 +124,44 @@ class SingleItemScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
+                            Text(
+                              '\$ 30.20',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
                           ],
                         ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        'Coffee is a mago surce of antixidants in the diet.',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(
+                            0.5,
+                          ),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'Volume',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        ],
                       ),
                     ],
                   ),
